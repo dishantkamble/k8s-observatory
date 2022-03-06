@@ -1,16 +1,15 @@
 .App {
+  padding: 10rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-grid {
+  display: grid;
+  padding: 0rem;
+  grid-gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .App-header {
