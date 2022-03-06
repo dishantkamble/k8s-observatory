@@ -1,6 +1,6 @@
 {
-    "short_name": "React App",
-    "name": "Create React App Sample",
+    "short_name": "K8s Observatory",
+    "name": "K8s Observatory",
     "icons": [
         {
             "src": "favicon.ico",
