@@ -13,14 +13,14 @@ const Home = () => {
                 <h2>K8s Observatory</h2>
             </div>
             <div className='main-grid'>
-                <Card style={{ width: '25rem' }}>
+                <Card className='grid-item'>
                     <Card.Body>
                         <Card.Title>Nodes</Card.Title>
                         <Card.Text>Monitor Nodes in the cluster</Card.Text>
                         <Button variant='primary' href='/nodes'>Details</Button>
                     </Card.Body>
                 </Card>
-                <Card style={{ width: '25rem' }}>
+                <Card className='grid-item'>
                     <Card.Body>
                         <Card.Title>Pods</Card.Title>
                         <Card.Text>Monitor Pods in the cluster</Card.Text>
