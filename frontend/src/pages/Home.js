@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import newLogo from '../new-logo.svg';
 import NavigationBar from '../components/NavigationBar';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -10,7 +11,7 @@ const Home = () => {
                 <NavigationBar />
             </main>
             <div className='App'>
-                <h2>K8s Observatory</h2>
+                <img src={newLogo} style={{ height: 200, width: 355 }}/>
             </div>
             <div className='main-grid'>
                 <Card className='grid-item'>

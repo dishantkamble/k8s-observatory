@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import logo from '../logo.png';
+import logo from '../new-logo.svg';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -11,8 +11,7 @@ const NavigationBar = () => {
             <Navbar bg='light' export='lg'>
                 <Container>
                     <Navbar.Brand href='/'>
-                        {/* <Logo title='Home' style={{ height: 25, width: 70 }} /> */}
-                        <img alt='Home' src={logo} style={{ height: 25, width: 25 }} />
+                        <img alt='Home' src={logo} style={{ height: 35 }} />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls='basic-navbar-nav' />
                     <Navbar.Collapse id='basic-navbar-nav'>
