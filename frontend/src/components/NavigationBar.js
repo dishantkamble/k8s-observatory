@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import logo from '../new-logo.svg';
+import gitlogo from '../git-contribute-logo.svg';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -24,6 +25,11 @@ const NavigationBar = () => {
                             </NavDropdown>
                         </Nav>
                     </Navbar.Collapse>
+                    <Nav.Item>
+                        <Nav.Link href="https://github.com/dishantkamble/k8s-observatory">
+                            <img className='divLogoImg' src={gitlogo} alt="Visit Github to contribute" />
+                        </Nav.Link>
+                    </Nav.Item>
                 </Container>
             </Navbar>
         </Fragment>

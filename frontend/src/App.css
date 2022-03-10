@@ -23,19 +23,45 @@
   border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.footerMain {
+  flex-shrink: 0;
+  margin: 0 auto;
+  font-size: small;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 6rem;
+  background-color: rgb(247, 247, 247);
 }
 
-.App-link {
-  color: #61dafb;
+.footerBody {
+  text-align: center;
+  padding: 10px 0;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.divLogoImg {
+  height: 20px;
+}
+
+.linkStyle {
+  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.linkStyleTitle {
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+}
+
+.copyRight {
+  margin-top: 10px;
+  font-size: smaller;
+  color: rgba(5, 5, 5, 0.603);
 }
 
 @keyframes App-logo-spin {
