@@ -11,9 +11,7 @@ import Col from 'react-bootstrap/Col'
 const Home = () => {
     return (
         <Fragment>
-            <main>
-                <NavigationBar />
-            </main>
+            <NavigationBar />
             <div className='App'>
                 <img src={newLogo} alt='Home' style={{ height: 200, width: 355 }} />
             </div>
@@ -24,7 +22,7 @@ const Home = () => {
                             <Card.Body>
                                 <Card.Title>Nodes</Card.Title>
                                 <Card.Text>Monitor Nodes in the cluster</Card.Text>
-                                <Button variant='primary' href='/nodes'>Details</Button>
+                                <Button variant='primary' size='sm' href='/nodes'>Details</Button>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -33,7 +31,7 @@ const Home = () => {
                             <Card.Body>
                                 <Card.Title>Pods</Card.Title>
                                 <Card.Text>Monitor Pods in the cluster</Card.Text>
-                                <Button variant='primary' href='/pods'>Details</Button>
+                                <Button variant='primary' size='sm' href='/pods'>Details</Button>
                             </Card.Body>
                         </Card>
                     </Col>

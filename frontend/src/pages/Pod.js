@@ -6,8 +6,7 @@ import ContainerDetail from '../components/ContainerDetail';
 import Badge from 'react-bootstrap/Badge';
 import Spinner from 'react-bootstrap/Spinner';
 import ListGroup from 'react-bootstrap/ListGroup';
-import "@ui5/webcomponents/dist/TabContainer";
-import "@ui5/webcomponents/dist/Tab";
+import { Tabs } from '@mantine/core';
 
 const Pod = () => {
     const { podName } = useParams();
@@ -32,10 +31,8 @@ const Pod = () => {
 
     return (
         <Fragment>
-            <main>
-                <NavigationBar />
-            </main>
-            <h2>Pod Details</h2>
+            <NavigationBar />
+            <h3>Pod Details</h3>
             {
                 loading === false ? (
                     <Spinner animation='border' role='status'>
@@ -78,15 +75,15 @@ const Pod = () => {
                         <br />
                         <h2>Container Details</h2>
                         <br />
-                        <ui5-tabcontainer class='full-width'>
+                        <Tabs>
                             {
                                 pod.containers.map(container => (
-                                    <ui5-tab text={container.name}>
+                                    <Tabs.Tab label={container.name}>
                                         <ContainerDetail container={container} />
-                                    </ui5-tab>
+                                    </Tabs.Tab>
                                 ))
                             }
-                        </ui5-tabcontainer>
+                        </Tabs>
                     </div>
                 )
             }

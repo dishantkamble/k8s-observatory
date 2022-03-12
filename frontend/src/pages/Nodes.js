@@ -27,10 +27,8 @@ const Nodes = () => {
 
     return (
         <Fragment>
-            <main>
-                <NavigationBar />
-            </main>
-            <h2>Nodes</h2>
+            <NavigationBar />
+            <h3>Nodes</h3>
             {
                 loading === false ? (
                     <Spinner animation='border' role='status'>

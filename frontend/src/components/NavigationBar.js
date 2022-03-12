@@ -32,6 +32,7 @@ const NavigationBar = () => {
                     </Nav.Item>
                 </Container>
             </Navbar>
+            <br/>
         </Fragment>
     );
 };

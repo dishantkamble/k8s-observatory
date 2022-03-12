@@ -15,7 +15,6 @@ const Footer = () => {
                 <Col>
                     <div className='linkStyleTitle'>LINKS</div>
                     <div className='copyRight'>Use of this platform is subject to these <a href="https://github.com/dishantkamble/k8s-observatory/blob/main/LICENSE">terms</a>.</div>
-                    <a href="/contact-us">Contact Us</a>
                 </Col>
                 <Col>
                     <div className='linkStyleTitle'>CONTACT US</div>

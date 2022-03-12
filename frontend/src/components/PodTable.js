@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Badge from 'react-bootstrap/Badge';
 import moment from 'moment';
+import { Switch } from '@mantine/core';
 import Table from 'react-bootstrap/Table';
 
 function PodTable({ data, filterByStatus, ignoreNamespace }) {
@@ -53,7 +54,10 @@ function PodTable({ data, filterByStatus, ignoreNamespace }) {
                                     <Button variant='primary' href={`/pods/${filteredPod.name}/namespace/${filteredPod.namespace}`} size='sm'>Details</Button>
                                     {' '}
                                     {
-                                        filteredPod.status !== 'SUCCEEDED' ? <Button variant='outlined-secondary' href={`/pods/${filteredPod.name}/namespace/${filteredPod.namespace}`} size='sm'>Subscribe</Button> : ''
+                                        filteredPod.status !== 'SUCCEEDED' ?
+                                            // <Button variant='outlined-secondary' href={`/pods/${filteredPod.name}/namespace/${filteredPod.namespace}`} size='sm'>Subscribe</Button>
+                                            <Switch label="Notify" />
+                                            : ''
                                     }
                                 </td>
                             </tr>
