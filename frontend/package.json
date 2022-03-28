@@ -8,7 +8,7 @@
         "@testing-library/react": "12.1.4",
         "@testing-library/user-event": "13.5.0",
         "bootstrap": "^5.1.3",
-        "css-select": "4.2.1",
+        "css-select": "4.3.0",
         "http-proxy-middleware": "2.0.4",
         "moment": "^2.29.1",
         "react": "17.0.2",
