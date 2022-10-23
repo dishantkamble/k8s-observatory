@@ -11,7 +11,7 @@ const Nodes = () => {
     const [nodes, setNodes] = useState([]);
 
     const getApi = () => {
-        let api = ApiUrlConstant + '/k8s-observatory/api/nodes/';
+        let api = ApiUrlConstant + '/k8s/nodes/';
 
         fetch(api).then(response => {
             return response.json();
