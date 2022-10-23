@@ -10,12 +10,12 @@ jobs:
       uses: actions/checkout@v3
       with:
         fetch-depth: 0
-    - name: Set up JDK 11
+    - name: Setup Java
       uses: actions/setup-java@v3
       with:
         distribution: 'zulu'
         java-version: '11'
-    - name: Semantic Version
+    - name: Compute next Semantic Version
       id: version
       uses: paulhatch/semantic-version@v4.0.3
       with:
@@ -38,11 +38,11 @@ jobs:
       run: mvn -B package --file api/pom.xml install -Dtoken=$GH_TOKEN
       env:
         GITHUB_TOKEN: ${{ github.token }}
-    - name: Publish to GitHub Packages Apache Maven
+    - name: Publish to GitHub Packages (Maven)
       run: mvn -B deploy -Dregistry=https://maven.pkg.github.com/dishantkamble -Dtoken=$GH_TOKEN
       env:
         GITHUB_TOKEN: ${{ github.token }}
-    - name: Create changelog text
+    - name: Comput Changelog
       id: changelog
       uses: mikepenz/release-changelog-builder-action@v3.4.0
       with:
