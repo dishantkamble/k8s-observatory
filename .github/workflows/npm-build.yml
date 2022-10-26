@@ -18,13 +18,15 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: Install Packages
-      run: cd ui
-      run: npm install
+      run: |
+        cd ui
+        npm install
     - name: Install React Scripts in Dev mode
       run: npm install react-scripts --save-dev
     - name: Build page
-      run: cd ui
-      run: npm run build
+      run: |
+        cd ui
+        npm run build
     # - name: Deploy to gh-pages
     #   uses: peaceiris/actions-gh-pages@v3
     #   with:
