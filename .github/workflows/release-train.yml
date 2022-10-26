@@ -39,7 +39,9 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ github.token }}
     - name: Publish to GitHub Packages (Maven)
-      run: mvn -B deploy -Dregistry=https://maven.pkg.github.com/dishantkamble -Dtoken=$GH_TOKEN
+      run: |
+        cd api
+        mvn -B deploy -Dregistry=https://maven.pkg.github.com/dishantkamble -Dtoken=$GH_TOKEN
       env:
         GITHUB_TOKEN: ${{ github.token }}
     - name: Comput Changelog
