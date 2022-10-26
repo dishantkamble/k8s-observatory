@@ -1,5 +1,21 @@
 {
-    "extends": [
-        "config:base"
-    ]
+    "groupName": "all dependencies",
+    "separateMajorMinor": false,
+    "groupSlug": "all",
+    "packageRules": [
+      {
+        "matchPackagePatterns": [
+          "*"
+        ],
+        "groupName": "all dependencies",
+        "groupSlug": "all"
+      },
+      {
+        "matchDatasources": ["maven"],
+        "registryUrls": ["https://maven.pkg.github.com/dishantkamble/central-java-dependency/"]
+      }
+    ],
+    "lockFileMaintenance": {
+      "enabled": false
+    }
 }

@@ -1,5 +1,7 @@
 import React from "react";
 import logo from '../new-logo.svg';
+import twitterLogo from '../twitter-logo.svg';
+import emailLogo from '../email-logo.svg';
 import moment from 'moment';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -20,11 +22,11 @@ const Footer = () => {
                     <div className='linkStyleTitle'>CONTACT US</div>
                     <div className='copyRight'>
                         <a href="mailto:dishantk@gmail.com" target={"_blank"} rel="noopener noreferrer">
-                            <img className='divLogoImg' src={'https://cdns.iconmonstr.com/wp-content/assets/preview/2012/240/iconmonstr-email-2.png'} alt="Email link to send a mail to me." />
+                            <img className='divLogoImg' src={emailLogo} alt="Email link to send a mail to me." />
                         </a>
                         {' '}
                         <a href="https://twitter.com/dishantk" target={"_blank"} rel="noopener noreferrer">
-                            <img className='divLogoImg' src={'https://cdns.iconmonstr.com/wp-content/assets/preview/2012/240/iconmonstr-twitter-1.png'} alt="Follow me on twitter" />
+                            <img className='divLogoImg' src={twitterLogo} alt="Follow me on twitter" />
                         </a>
                     </div>
                 </Col>

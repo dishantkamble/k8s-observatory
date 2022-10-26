@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import logo from '../new-logo.svg';
 import gitlogo from '../git-contribute-logo.svg';
 import Container from 'react-bootstrap/Container';
+import Image from 'react-bootstrap/Image'
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -9,10 +10,14 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 const NavigationBar = () => {
     return (
         <Fragment>
-            <Navbar bg='light' export='lg'>
+            <Navbar 
+            variant='light'
+            expand='lg'
+            sticky='top'
+            >
                 <Container>
                     <Navbar.Brand href='/'>
-                        <img alt='Home' src={logo} style={{ height: 35 }} />
+                        <Image alt='Home' src={logo} style={{ height: 35 }} />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls='basic-navbar-nav' />
                     <Navbar.Collapse id='basic-navbar-nav'>
@@ -27,7 +32,7 @@ const NavigationBar = () => {
                     </Navbar.Collapse>
                     <Nav.Item>
                         <Nav.Link href="https://github.com/dishantkamble/k8s-observatory">
-                            <img className='divLogoImg' src={gitlogo} alt="Visit Github to contribute" />
+                            <Image className='divLogoImg' src={gitlogo} alt="Visit Github to contribute" />
                         </Nav.Link>
                     </Nav.Item>
                 </Container>

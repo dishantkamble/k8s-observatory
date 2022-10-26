@@ -1,16 +1,15 @@
 .App {
-  padding: 5rem;
+  padding: 2rem;
   text-align: center;
 }
 
 .main-grid {
   display: grid;
-  padding: 0rem;
+  padding: 2rem;
   grid-gap: 2rem;
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-family: 'Ubuntu', sans-serif;
 }
 
 .grid-item {
@@ -31,8 +30,8 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 6rem;
-  background-color: rgb(247, 247, 247);
+  /* height: 6rem; */
+  background-color: rgb(255, 255, 255);
 }
 
 .footerBody {
@@ -62,6 +61,10 @@
   margin-top: 10px;
   font-size: smaller;
   color: rgba(5, 5, 5, 0.603);
+}
+
+h3 {
+  font-family: 'Noto Sans', sans-serif;
 }
 
 @keyframes App-logo-spin {

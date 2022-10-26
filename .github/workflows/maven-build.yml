@@ -1,0 +1,21 @@
+name: Maven Build
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Branch
+      uses: actions/checkout@v3
+    - name: Setup Java
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'zulu'
+        java-version: '11'
+    - name: Build with Maven
+      run: mvn -B package -Dregistry=https://maven.pkg.github.com/dishantkamble --file api/pom.xml install
+      env:
+        GITHUB_TOKEN: ${{ github.token }}

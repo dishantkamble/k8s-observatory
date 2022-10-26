@@ -16,6 +16,7 @@
 
 	<properties>
 		<java.version>11</java.version>
+		<kubernetes-client.version>5.12.1</kubernetes-client.version>
 	</properties>
 
 	<dependencies>
@@ -23,7 +24,15 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.fabric8</groupId>
+			<artifactId>kubernetes-client</artifactId>
+			<version>${kubernetes-client.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -46,6 +55,23 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+	<repositories>
+		<repository>
+		  <id>github</id>
+		  <name>central-java-dependency</name>
+		  <url>https://maven.pkg.github.com/dishantkamble/central-java-dependency</url>
+		</repository>
+	  </repositories>
+	  
+	  <distributionManagement>
+		<repository>
+		  <id>github</id>
+		  <name>GitHub Dishant Apache Maven Packages</name>
+		  <url>https://maven.pkg.github.com/dishantkamble/k8s-observatory</url>
+		</repository>
+	  </distributionManagement>
+  
 
 	<build>
 		<plugins>
