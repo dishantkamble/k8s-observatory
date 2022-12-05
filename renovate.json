@@ -2,11 +2,11 @@
     "groupName": "all dependencies",
     "separateMajorMinor": false,
     "groupSlug": "all",
-    hostRules: [
+    "hostRules": [
         {
-          hostType: "maven",
-          matchHost: "https://maven.pkg.github.com/dishantkamble/central-java-dependency/",
-          token: "${{ github.token }}"
+          "hostType": "maven",
+          "matchHost": "https://maven.pkg.github.com/dishantkamble/central-java-dependency/",
+          "token": "${{ github.token }}"
         }
     ],
     "packageRules": [
