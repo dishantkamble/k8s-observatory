@@ -2,6 +2,13 @@
     "groupName": "all dependencies",
     "separateMajorMinor": false,
     "groupSlug": "all",
+    hostRules: [
+        {
+          hostType: "maven",
+          matchHost: "https://maven.pkg.github.com/dishantkamble/central-java-dependency/",
+          token: "${{ github.token }}"
+        }
+    ],
     "packageRules": [
       {
         "matchPackagePatterns": [
@@ -12,7 +19,7 @@
       },
       {
         "matchDatasources": ["maven"],
-        "registryUrls": ["https://maven.pkg.github.com/dishantkamble/central-java-dependency/"]
+        "registryUrls": ["https://maven.pkg.github.com/dishantkamble/central-java-dependency/", "https://repo.maven.apache.org/maven2"]
       }
     ],
     "lockFileMaintenance": {
