@@ -14,7 +14,7 @@ jobs:
       uses: actions/setup-java@v3
       with:
         distribution: 'zulu'
-        java-version: '11'
+        java-version: '19'
     - name: Build with Maven
       run: mvn -B package -Dregistry=https://maven.pkg.github.com/dishantkamble --file api/pom.xml install
       env:
