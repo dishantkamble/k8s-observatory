@@ -44,7 +44,7 @@ jobs:
         GITHUB_TOKEN: ${{ github.token }}
     - name: Comput Changelog
       id: changelog
-      uses: mikepenz/release-changelog-builder-action@v3.4.0
+      uses: mikepenz/release-changelog-builder-action@v3.5.0
       with:
         configuration: "changelog_config.json"
       env:
