@@ -24,7 +24,7 @@ jobs:
       uses: gittools/actions/gitversion/execute@v0.9.15
     - name: Update version in pom.xml (Release only)
       run: |
-        mvn -B versions:set -DnewVersion=${{ steps.gitversion.outputs.semVer }} -DgenerateBackupPoms=false -Dregistry=https://maven.pkg.github.com/dishantkamble -Dtoken=$GH_TOKEN --file api/pom.xml
+        mvn -B versions:set -DnewVersion=${{ steps.gitversion.outputs.semVer }} -DgenerateBackupPoms=false -Dregistry=https://maven.pkg.github.com/dishantkamble -Dtoken=$GH_TOKEN --file /api/pom.xml
         git config user.email "dishantk@gmail.com"
         git config user.name "Dishant Kamble"
         git add .
@@ -33,7 +33,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ github.token }}
     - name: Build with Maven
-      run: mvn -B package --file api/pom.xml install -Dtoken=$GH_TOKEN
+      run: mvn -B package --file /api/pom.xml install -Dtoken=$GH_TOKEN
       env:
         GITHUB_TOKEN: ${{ github.token }}
     - name: Publish to GitHub Packages (Maven)
