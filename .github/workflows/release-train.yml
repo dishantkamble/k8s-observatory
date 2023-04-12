@@ -22,9 +22,18 @@ jobs:
     - name: Determine Version
       id:   gitversion
       uses: gittools/actions/gitversion/execute@v0.10.2
+    - name: Semantic Version
+      id: version
+      uses: paulhatch/semantic-version@v5.0.3
+      with:
+        tag_prefix: ""
+        major_pattern: /feat?/
+        minor_pattern: /fix?/
+        version_format: "${major}.${minor}.${patch}"
+        bump_each_commit: false
     - name: Update version in pom.xml (Release only)
       run: |
-        mvn -B versions:set -DnewVersion=${{ steps.gitversion.outputs.semVer }} -DgenerateBackupPoms=false -Dregistry=https://maven.pkg.github.com/dishantkamble -Dtoken=$GH_TOKEN --file api/pom.xml
+        mvn -B versions:set -DnewVersion=${{ steps.version.outputs.version }} -DgenerateBackupPoms=false -Dregistry=https://maven.pkg.github.com/dishantkamble -Dtoken=$GH_TOKEN --file api/pom.xml
         git config user.email "dishantk@gmail.com"
         git config user.name "Dishant Kamble"
         git add .
@@ -52,7 +61,7 @@ jobs:
     - name: Create Release
       uses: ncipollo/release-action@v1.12.0
       with:
-        tag: ${{ steps.gitversion.outputs.semVer }}
+        tag: ${{ steps.version.outputs.version }}
         body: ${{ steps.changelog.outputs.changelog}}
         generateReleaseNotes: true
       env:
