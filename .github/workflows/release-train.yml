@@ -80,10 +80,8 @@ jobs:
       run: |
         cd ui
         npm adduser
-        npm install
-        npm install react-scripts --save-dev
-        npm run build
         npm ci
+        npm run build
         npm publish
       env:
         CI: false
