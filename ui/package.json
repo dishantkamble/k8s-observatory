@@ -1,5 +1,6 @@
 {
     "name": "k8s-observatory-ui",
+    "repository":"https://github.com/dishantkamble/k8s-observatory",
     "version": "1.0.0",
     "private": true,
     "dependencies": {
