@@ -59,7 +59,9 @@ jobs:
         GITHUB_TOKEN: ${{ github.token }}
   build-frontend:
     runs-on: ubuntu-latest
-    needs: versioning
+    needs:
+    - versioning
+    - build-backend
     permissions:
       contents: read
       packages: write
@@ -98,7 +100,10 @@ jobs:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   docker:
     runs-on: ubuntu-latest
-    needs: versioning
+    needs: 
+    - versioning
+    - build-backend
+    - build-frontend
     steps:
     - name: Checkout Branch
       uses: actions/checkout@v3
@@ -146,7 +151,11 @@ jobs:
         labels: ${{ steps.meta-ui.outputs.labels }}
   release:
     runs-on: ubuntu-latest
-    needs: versioning
+    needs: 
+    - versioning
+    - build-backend
+    - build-frontend
+    - docker
     steps:
     - name: Checkout
       uses: actions/checkout@v3
