@@ -57,31 +57,32 @@ jobs:
 #         mvn -B deploy -Dregistry=https://maven.pkg.github.com/dishantkamble -Dtoken=$GH_TOKEN
 #       env:
 #         GITHUB_TOKEN: ${{ github.token }}
-#   build-frontend:
-#     runs-on: ubuntu-latest
-#     needs:
-#     - versioning
+  build-frontend:
+    runs-on: ubuntu-latest
+    needs:
+    - versioning
 #     - build-backend
-#     permissions:
-#       contents: read
-#       packages: write
-#     steps:
-#     - name: Checkout Branch
-#       uses: actions/checkout@v3
-#     - name: Setup Node.js 19.x
-#       uses: actions/setup-node@v3
-#       with:
-#         node-version: '19.x'
-#         registry-url: 'https://npm.pkg.github.com'
+    permissions:
+      contents: read
+      packages: write
+    steps:
+    - name: Checkout Branch
+      uses: actions/checkout@v3
+    - name: Setup Node.js 19.x
+      uses: actions/setup-node@v3
+      with:
+        node-version: '19.x'
+        registry-url: 'https://npm.pkg.github.com'
 
-#     - name: Install Packages
-#       run: |
-#         cd ui
-#         npm i
-#         npm publish
-#       env:
-#         CI: false
-#         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Install Packages
+      run: |
+        cd ui
+        npm version ${{ needs.versioning.outputs.version }}
+        npm i
+        npm publish
+      env:
+        CI: false
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   docker:
     runs-on: ubuntu-latest
     needs: 
