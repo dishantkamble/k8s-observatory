@@ -75,13 +75,12 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
+        registry-url: 'https://npm.pkg.github.com'
 
     - name: Install Packages
       run: |
         cd ui
-        npm adduser
         npm ci
-        npm run build
         npm publish
       env:
         CI: false
