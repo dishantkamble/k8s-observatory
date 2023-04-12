@@ -80,24 +80,30 @@ jobs:
       run: |
         cd ui
         npm install
-    - name: Install React Scripts in Dev mode
-      run: npm install react-scripts --save-dev
-
-    - name: Build
-      run: |
-        cd ui
+        npm install react-scripts --save-dev
         npm run build
-      env:
-        CI: false
-    - run: |
-        cd ui
         npm ci
-    - name: Publish npm Package
-      run: |
-        cd ui
         npm publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#     - name: Install React Scripts in Dev mode
+#       run: npm install react-scripts --save-dev
+
+#     - name: Build
+#       run: |
+#         cd ui
+#         npm run build
+#       env:
+#         CI: false
+#     - run: |
+#         cd ui
+#         npm ci
+#     - name: Publish npm Package
+#       run: |
+#         cd ui
+#         npm publish
+#       env:
+#         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   docker:
     runs-on: ubuntu-latest
     needs: 
