@@ -85,6 +85,7 @@ jobs:
         npm ci
         npm publish
       env:
+        CI: false
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #     - name: Install React Scripts in Dev mode
 #       run: npm install react-scripts --save-dev
