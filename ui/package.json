@@ -1,5 +1,9 @@
 {
-    "name": "k8s-observatory-ui",
+    "name": "@dishantkamble/k8s-observatory-ui",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dishantkamble/k8s-observatory.git"
+    },
     "version": "1.0.0",
     "private": true,
     "dependencies": {
