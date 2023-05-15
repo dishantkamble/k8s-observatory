@@ -16,7 +16,7 @@
 
 	<properties>
 		<java.version>11</java.version>
-		<kubernetes-client.version>6.6.1</kubernetes-client.version>
+		<kubernetes-client.version>6.6.2</kubernetes-client.version>
 	</properties>
 
 	<dependencies>
