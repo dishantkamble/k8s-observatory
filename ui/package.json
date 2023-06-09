@@ -20,7 +20,7 @@
         "react-router-dom": "6.12.1",
         "react-scripts": "5.0.1",
         "resolve-url-loader": "5.0.0",
-        "sass": "1.63.2",
+        "sass": "1.63.3",
         "web-vitals": "3.3.2"
     },
     "scripts": {
