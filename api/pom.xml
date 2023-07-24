@@ -12,7 +12,7 @@
 
 	<groupId>com.dishant</groupId>
 	<artifactId>k8s-observatory-api</artifactId>
-	<version>1.0.37</version>
+	<version>1.0.38</version>
 
 	<properties>
 		<java.version>11</java.version>
