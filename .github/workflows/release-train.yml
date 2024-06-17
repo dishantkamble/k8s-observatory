@@ -119,14 +119,14 @@ jobs:
             type=semver,pattern={{version}},value=${{ needs.versioning.outputs.version }}
 
     - name: Build and Publish Image - Backend
-      uses: docker/build-push-action@v5
+      uses: docker/build-push-action@v6
       with:
         context: ./api
         push: true
         tags: ${{ steps.meta-api.outputs.tags }}
         labels: ${{ steps.meta-api.outputs.labels }}
     - name: Build and Publish Image - Frontend
-      uses: docker/build-push-action@v5
+      uses: docker/build-push-action@v6
       with:
         context: ./ui
         push: true
