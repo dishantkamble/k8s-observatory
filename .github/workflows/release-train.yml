@@ -47,14 +47,14 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ github.token }}
 
-    - name: Build with Maven
-      run: mvn -B package --file api/pom.xml install -Dtoken=$GH_TOKEN
-      env:
-        GITHUB_TOKEN: ${{ github.token }}
-    - name: Publish to GitHub Packages (Maven)
+    # - name: Build with Maven
+    #   run: mvn -B package --file api/pom.xml install -Dtoken=$GH_TOKEN
+    #   env:
+    #     GITHUB_TOKEN: ${{ github.token }}
+    - name: Build & Publish to GitHub Packages (Maven)
       run: |
         cd api
-        mvn -B deploy -Dregistry=https://maven.pkg.github.com/dishantkamble -Dtoken=$GH_TOKEN
+        mvn -B clean deploy -Dregistry=https://maven.pkg.github.com/dishantkamble -Dtoken=$GH_TOKEN
       env:
         GITHUB_TOKEN: ${{ github.token }}
   build-frontend:
