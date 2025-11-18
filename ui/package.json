@@ -6,7 +6,7 @@
     },
     "version": "1.0.0",
     "dependencies": {
-        "@mantine/core": "8.3.6",
+        "@mantine/core": "8.3.8",
         "@testing-library/jest-dom": "6.9.1",
         "@testing-library/react": "16.3.0",
         "@testing-library/user-event": "14.6.1",
@@ -17,10 +17,10 @@
         "react": "19.2.0",
         "react-bootstrap": "2.10.10",
         "react-dom": "19.2.0",
-        "react-router-dom": "7.9.5",
+        "react-router-dom": "7.9.6",
         "react-scripts": "5.0.1",
         "resolve-url-loader": "5.0.0",
-        "sass": "1.93.3",
+        "sass": "1.94.1",
         "web-vitals": "5.1.0"
     },
     "scripts": {
