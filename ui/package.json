@@ -6,7 +6,7 @@
     },
     "version": "1.0.0",
     "dependencies": {
-        "@mantine/core": "8.3.10",
+        "@mantine/core": "8.3.11",
         "@testing-library/jest-dom": "6.9.1",
         "@testing-library/react": "16.3.1",
         "@testing-library/user-event": "14.6.1",
@@ -20,7 +20,7 @@
         "react-router-dom": "7.11.0",
         "react-scripts": "5.0.1",
         "resolve-url-loader": "5.0.0",
-        "sass": "1.97.1",
+        "sass": "1.97.2",
         "web-vitals": "5.1.0"
     },
     "scripts": {
