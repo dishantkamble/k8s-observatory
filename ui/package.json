@@ -6,7 +6,7 @@
     },
     "version": "1.0.0",
     "dependencies": {
-        "@mantine/core": "9.0.2",
+        "@mantine/core": "9.1.0",
         "@testing-library/jest-dom": "6.9.1",
         "@testing-library/react": "16.3.2",
         "@testing-library/user-event": "14.6.1",
@@ -17,7 +17,7 @@
         "react": "19.2.5",
         "react-bootstrap": "2.10.10",
         "react-dom": "19.2.5",
-        "react-router-dom": "7.14.1",
+        "react-router-dom": "7.14.2",
         "react-scripts": "5.0.1",
         "resolve-url-loader": "5.0.0",
         "sass": "1.99.0",
