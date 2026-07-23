@@ -17,7 +17,7 @@ jobs:
         fetch-depth: 0
     - name: Semantic Version
       id: version
-      uses: paulhatch/semantic-version@v6.0.2
+      uses: paulhatch/semantic-version@v6.0.3
       with:
         tag_prefix: ""
         major_pattern: /feat?/
@@ -64,7 +64,7 @@ jobs:
     - name: Checkout Branch
       uses: actions/checkout@v7
     - name: Setup Node.js 19.x
-      uses: actions/setup-node@v6
+      uses: actions/setup-node@v7
       with:
         node-version: '19.x'
         registry-url: 'https://npm.pkg.github.com'
