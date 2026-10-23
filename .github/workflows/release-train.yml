@@ -17,7 +17,7 @@ jobs:
         fetch-depth: 0
     - name: Semantic Version
       id: version
-      uses: paulhatch/semantic-version@v6.0.4
+      uses: paulhatch/semantic-version@v6.0.5
       with:
         tag_prefix: ""
         major_pattern: /feat?/
